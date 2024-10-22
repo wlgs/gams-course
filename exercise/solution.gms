@@ -1,16 +1,16 @@
 $ontext
 
-* A student participates in a beer drinking contest. The contest
-* lasts 1 hour. it Takes him 2 minutes to drink one bottle of light
-* beer and 3 minutes to drink a bottle of lager beer. He gets 4
-* points for each light beer and 5 points for each lager. How many * bottles of each beer type should a student drink to maximize the
-* chances to win the contest?
+A student participates in a beer drinking contest. The contest
+lasts 1 hour. it Takes him 2 minutes to drink one bottle of light
+beer and 3 minutes to drink a bottle of lager beer. He gets 4
+points for each light beer and 5 points for each lager. How many * bottles of each beer type should a student drink to maximize the
+chances to win the contest?
 
-* Indicate:
-* Objective function
-* Decision variables
-* Constraints
-* Write the problem in the following form: max -> f(x,y) = 
+Indicate:
+Objective function
+Decision variables
+Constraints
+Write the problem in the following form: max -> f(x,y) = 
 
 $offtext
 
