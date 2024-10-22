@@ -63,23 +63,29 @@ Table pGenCF(t,g) 'hourly capacity factor of generators in a given hour'
 display pGenCF
 
 
-Positive Variables
-vProd
-Y
-Z
-;
+Positive Variable
+vProd;
 
 Free Variable
-h
-;
+vTotalCost 'Variable holding total cost value';
 
 
+Equations
+
+eObj 's'
+eBalElc 'a'
+eElcProdLim(g) 'b';
 
 
+eObj.. vTotalCost =e= sum((t,g), pGenCF(t,g) * pPowerGen(g) * pUnitPriceElectr);
 
+eBalElc(t) ..sum(g, pGenCF(t,g) * pPowerGen(g)) =g= sum(d, pPowerDem(d));
 
+eElcProdLim(g) ..
+    vProd(g) =l= pPowerGen(g);
 
+Model mPowerGen /all/;
 
+Solve mPowerGen using lp minimizing vTotalCost;
 
-
-
+display vTotalCost.l, vProd.l;
