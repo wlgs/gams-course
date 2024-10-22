@@ -42,11 +42,16 @@ Free variable
 vTotalPoints 'total points';
 
 Positive Variables
-* DECISION VARIABLE !!!
+* decision variable we are looking answers for
 vBeers(b) 'number of beers of each type that we should drink';
 
-* set a fixed value *
-vBeers.fx('lager') = 12
+* always take 12 *
+* vBeers.fx('lager') = 12
+* take at least 10 
+* vBeers.lo('lager') = 10
+* take no more than 15
+* vBeers.up('lager') = 15
+
 
 Equations
 eObj 'objective function'
