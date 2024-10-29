@@ -3,8 +3,6 @@ A farmer produces energy crops i.e. miscanthus willow and poplar. He has 15 acre
 
 The farmer has 400 eur and he has 48 hours available for wokring these crops. How much of each crop he should plant to maximize the rofit
 
-
-
 $offtext
 
 Sets
