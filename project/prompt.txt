@@ -1,0 +1,21 @@
+I need you to write a code for model in General Algebraic Modeling language (.gms file) for a game which goal is to maximize "line" (game currency) generation.
+
+Rules of the game:
+- Grid 5x5 (make it a variable)
+- You can't go over instability
+- Starting 100 instability capacity, total of 10% of instability capacity generation is allowed (ONLY otherwise the grid is invalid)
+- Maximize line generation by placing specific elements:
+    - Hourglass: 
+        - Increases line generation by 5
+        - Increases instability generation and line generation by 40% for adjacent elements (only north,south,west,east)
+        - Increases instability generation by 3
+
+    - Diamond:
+        - Reduces instability generation of adjacent elements by 2
+    - Square:
+        - Increases instability capacity by 10
+    - Triangle:
+        - Increases line generation for adjacent elements by 100% (cannot boost other triangles)
+        - Increases instability generation for adjacent elements by 67%
+
+The result of solving the model should provide most efficient placement of elements across the grid with the instability generation within the allowed capacity.
