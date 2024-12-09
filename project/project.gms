@@ -28,9 +28,8 @@ PARAMETERS
     LineGenerationBoost(ElementType) / Hourglass 0.4, Diamond 0, Square 0, Triangle 1.0 / 
     InstabilityGenerationBoost(ElementType) / Hourglass 0.4, Diamond -2, Square 0, Triangle 0.67 /;
 
-
 BINARY VARIABLE
- x(i,j,ElementType) Binary placement of elements
+x(i,j,ElementType) Binary placement of elements
 
 VARIABLES
     TotalLineGeneration Total line generation
@@ -55,6 +54,10 @@ ObjectiveFunction..
 * Constraint: Total placed elements cannot exceed grid size squared
 ElementPlacementConstraint.. 
     SUM((i,j,ElementType), x(i,j,ElementType)) =L= GridSize * GridSize;
+
+* Constraint: Only one element can be placed in each grid space
+OneElementPerGridSpaceConstraint(i,j)..
+    SUM(ElementType, x(i,j,ElementType)) =L= 1;
 
 * Constraint: Manage instability generation within capacity
 InstabilityCapacityConstraint.. 

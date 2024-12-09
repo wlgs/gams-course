@@ -1,4 +1,4 @@
-I need you to write a code for model in General Algebraic Modeling language (.gms file) for a game which goal is to maximize "line" (game currency) generation.
+I need you to write a code for model in General Algebraic Modeling language (.gms file) for a game which goal is to maximize "line" (game currency) generation. I need to be able to build it in GAMS Studio program.
 
 Rules of the game:
 - Grid 5x5 (make it a variable)
