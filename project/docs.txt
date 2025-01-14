@@ -1,0 +1,6 @@
+https://www.gams.com/48/docs/UG_OrderedSets.html#UG_OrderedSets_TheOrdOperator
+
+
+TODO:
+load variables from csv
+complete square implementation
